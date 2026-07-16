@@ -1,0 +1,191 @@
+.infinite-menu-shell {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 6px;
+  background: rgba(4, 4, 4, 0.035);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 22px 60px rgba(0, 0, 0, 0.16);
+}
+
+.infinite-grid-menu-canvas {
+  cursor: grab;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  outline: none;
+  display: block;
+}
+
+.infinite-grid-menu-canvas:active { cursor: grabbing; }
+
+.glass-menu-label {
+  position: absolute;
+  z-index: 10;
+  margin: 0;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  background: rgba(8, 8, 8, 0.26);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  transition: opacity 0.2s ease, transform 0.28s cubic-bezier(.2, .8, .2, 1);
+}
+
+.face-title {
+  user-select: none;
+  left: 20px;
+  bottom: 20px;
+  max-width: min(62%, 360px);
+  padding: 12px 16px;
+  font: italic clamp(1.25rem, 2.3vw, 2rem) var(--font-heading);
+  line-height: 1;
+  transform-origin: left bottom;
+}
+
+.face-description {
+  user-select: none;
+  right: 20px;
+  top: 20px;
+  max-width: 180px;
+  padding: 9px 12px;
+  color: rgba(255, 255, 255, 0.72);
+  font: 500 0.67rem var(--font);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transform-origin: right top;
+}
+
+.face-title.active,
+.face-description.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+.face-title.active:hover,
+.face-description.active:hover { transform: scale(1.08); }
+
+.face-title.inactive,
+.face-description.inactive {
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(0.94);
+}
+
+.action-button {
+  position: absolute;
+  left: 50%;
+  z-index: 11;
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  color: #111;
+  background: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.action-button-icon {
+  color: #111;
+  font-size: 15px;
+  transform: translateX(1px);
+}
+
+.action-button.active {
+  bottom: 18px;
+  transform: translateX(-50%) scale(1);
+  opacity: 1;
+  pointer-events: auto;
+  transition: 0.35s ease;
+}
+
+.action-button.active:hover { transform: translateX(-50%) scale(1.12); }
+
+.action-button.inactive {
+  bottom: -60px;
+  transform: translateX(-50%) scale(0);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.15s ease;
+}
+
+.work-preview-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.work-preview-dialog {
+  position: relative;
+  width: min(92%, 680px);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 6px;
+  background: rgba(8, 8, 8, 0.72);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+}
+
+.work-preview-dialog video {
+  display: block;
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  background: #000;
+}
+
+.work-preview-copy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 14px 18px;
+}
+
+.work-preview-copy span { color: #e8a64e; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; }
+.work-preview-copy strong { font-size: 0.9rem; font-weight: 500; }
+
+.work-preview-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 50%;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .infinite-menu-shell { min-height: 390px; }
+  .face-title { left: 12px; bottom: 12px; max-width: 72%; padding: 10px 12px; }
+  .face-description { top: 12px; right: 12px; }
+  .action-button.active { bottom: 12px; }
+  .work-preview-copy { align-items: flex-start; flex-direction: column; }
+}
+
+@media (pointer: coarse) {
+  .action-button.active:hover,
+  .face-title.active:hover,
+  .face-description.active:hover { transform: none; }
+}
