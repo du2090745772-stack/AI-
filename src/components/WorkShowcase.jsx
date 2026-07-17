@@ -1,14 +1,14 @@
 import { motion } from 'motion/react';
 
 const works = [
-  { src: '/work-01.m4v', title: '角色设定与动作测试', category: 'CG / 角色' },
-  { src: '/work-02.m4v', title: '灾变场景与特效设计', category: 'CG / 特效' },
-  { src: '/work-03.m4v', title: '东方幻想角色镜头', category: 'CG / 角色' },
-  { src: '/work-04.m4v', title: '食品广告视觉实验', category: '广告片 / 食品' },
-  { src: '/work-05.m4v', title: '产品氛围与景别控制', category: '广告片 / 食品' },
-  { src: '/work-06.m4v', title: '叙事型短片镜头', category: '广告片 / 叙事' },
-  { src: '/work-07.m4v', title: '真人短剧场景', category: '漫剧 / 真人' },
-  { src: '/work-08.m4v', title: '动画短剧分镜', category: '漫剧 / 动画' },
+  { src: `${import.meta.env.BASE_URL}work-01.m4v`, title: '角色设定与动作测试', category: 'CG / 角色' },
+  { src: `${import.meta.env.BASE_URL}work-02.m4v`, title: '灾变场景与特效设计', category: 'CG / 特效' },
+  { src: `${import.meta.env.BASE_URL}work-03.m4v`, title: '东方幻想角色镜头', category: 'CG / 角色' },
+  { src: `${import.meta.env.BASE_URL}work-04.m4v`, title: '食品广告视觉实验', category: '广告片 / 食品' },
+  { src: `${import.meta.env.BASE_URL}work-05.m4v`, title: '产品氛围与景别控制', category: '广告片 / 食品' },
+  { src: `${import.meta.env.BASE_URL}work-06.m4v`, title: '叙事型短片镜头', category: '广告片 / 叙事' },
+  { src: `${import.meta.env.BASE_URL}work-07.m4v`, title: '真人短剧场景', category: '漫剧 / 真人' },
+  { src: `${import.meta.env.BASE_URL}work-08.m4v`, title: '动画短剧分镜', category: '漫剧 / 动画' },
 ];
 
 function WorkCard({ work }) {

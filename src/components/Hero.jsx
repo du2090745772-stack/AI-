@@ -7,7 +7,7 @@ export default function Hero() {
 
   return (
     <section id="hero" style={{ position:'relative', width:'100%', height:'100vh', overflow:'hidden', background:'#000' }}>
-      <FadingVideo src="/about-bg.mp4" className="absolute left-1/2 top-0 -translate-x-1/2 object-cover object-top z-0"
+      <FadingVideo src={`${import.meta.env.BASE_URL}about-bg.mp4`} className="absolute left-1/2 top-0 -translate-x-1/2 object-cover object-top z-0"
         style={{ width:'120%', height:'120%' }} />
       <div className="hero-video-shade" />
 

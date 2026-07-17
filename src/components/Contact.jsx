@@ -4,7 +4,7 @@ import FadingVideo from './FadingVideo';
 export default function Contact() {
   return (
     <section id="contact" className="resume-contact-page">
-      <FadingVideo src="/contact-bg.m4v" className="contact-video" />
+      <FadingVideo src={`${import.meta.env.BASE_URL}contact-bg.m4v`} className="contact-video" />
       <div className="contact-video-shade" />
       <motion.div className="contact-inner" initial={{opacity:0,y:30}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{duration:0.6}}>
         <div className="contact-copyblock">

@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 
 const projects = [
-  { id: 1, number: '01', title: 'AI 漫剧完整工作流', subtitle: 'SCRIPT TO SCREEN', desc: '从剧本拆解、角色设定、分镜设计到动态生成与后期合成，建立可复用、可量产的 AI 漫剧制作流程。', tags: ['剧本拆解','角色一致性','动态分镜','后期合成'], accent: '#f0a84b', video: '/reel-01.mp4' },
-  { id: 2, number: '02', title: '角色与风格控制', subtitle: 'CHARACTER SYSTEM', desc: '围绕角色特征、光影语言和画面风格设计提示词体系，让连续镜头中的人物和美术方向保持稳定。', tags: ['角色特写','风格控制','光影设计','一致性'], accent: '#d16b4b', video: '/reel-02.mp4' },
-  { id: 3, number: '03', title: '动态镜头与节奏', subtitle: 'MOTION DIRECTION', desc: '将运镜、动作幅度、速度变化和情绪节奏拆成可执行指令，提升 AI 视频的叙事张力与完成度。', tags: ['镜头语言','动作设计','节奏控制','迭代优化'], accent: '#55b7a8', video: '/reel-03.mp4' },
+  { id: 1, number: '01', title: 'AI 漫剧完整工作流', subtitle: 'SCRIPT TO SCREEN', desc: '从剧本拆解、角色设定、分镜设计到动态生成与后期合成，建立可复用、可量产的 AI 漫剧制作流程。', tags: ['剧本拆解','角色一致性','动态分镜','后期合成'], accent: '#f0a84b', video: `${import.meta.env.BASE_URL}reel-01.mp4` },
+  { id: 2, number: '02', title: '角色与风格控制', subtitle: 'CHARACTER SYSTEM', desc: '围绕角色特征、光影语言和画面风格设计提示词体系，让连续镜头中的人物和美术方向保持稳定。', tags: ['角色特写','风格控制','光影设计','一致性'], accent: '#d16b4b', video: `${import.meta.env.BASE_URL}reel-02.mp4` },
+  { id: 3, number: '03', title: '动态镜头与节奏', subtitle: 'MOTION DIRECTION', desc: '将运镜、动作幅度、速度变化和情绪节奏拆成可执行指令，提升 AI 视频的叙事张力与完成度。', tags: ['镜头语言','动作设计','节奏控制','迭代优化'], accent: '#55b7a8', video: `${import.meta.env.BASE_URL}reel-03.mp4` },
 ];
 
 export default function Projects() {

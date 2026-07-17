@@ -2,19 +2,19 @@ import { motion } from 'motion/react';
 
 const reels = [
   {
-    src: '/reel-01.mp4',
+    src: `${import.meta.env.BASE_URL}reel-01.mp4`,
     index: '01',
     title: '能量场景构建',
     note: '氛围、光效与环境叙事',
   },
   {
-    src: '/reel-02.mp4',
+    src: `${import.meta.env.BASE_URL}reel-02.mp4`,
     index: '02',
     title: '角色特写控制',
     note: '角色一致性与情绪表达',
   },
   {
-    src: '/reel-03.mp4',
+    src: `${import.meta.env.BASE_URL}reel-03.mp4`,
     index: '03',
     title: '动态镜头设计',
     note: '运镜、动作与节奏编排',

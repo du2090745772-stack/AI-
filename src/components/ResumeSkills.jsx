@@ -19,7 +19,7 @@ const groups = [
 export default function ResumeSkills() {
   return (
     <section id="about" className="resume-skills-page">
-      <FadingVideo src="/hero-bg.mp4" className="resume-page-video" />
+      <FadingVideo src={`${import.meta.env.BASE_URL}hero-bg.mp4`} className="resume-page-video" />
       <div className="resume-page-vignette" />
       <div className="resume-skills-content">
         <motion.div className="resume-section-heading"

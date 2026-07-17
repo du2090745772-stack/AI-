@@ -13,7 +13,7 @@ const stats = [
 export default function About() {
   return (
     <section id="about" style={{ position:'relative', minHeight:'100vh', overflow:'hidden', background:'#000' }}>
-      <FadingVideo src="/hero-bg.mp4" className="absolute inset-0 w-full h-full object-cover z-0" />
+      <FadingVideo src={`${import.meta.env.BASE_URL}hero-bg.mp4`} className="absolute inset-0 w-full h-full object-cover z-0" />
       <div className="about-video-shade" />
 
       <div style={{ position:'relative', zIndex:10, minHeight:'100vh', padding:'80px 40px', maxWidth:1200, margin:'0 auto', display:'flex', flexDirection:'column', justifyContent:'center' }}>
