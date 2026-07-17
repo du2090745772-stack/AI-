@@ -15,7 +15,7 @@ export default function App() {
       <div className="glow-divider" />
       <CinematicPage
         id="awards"
-        video="/reel-01.mp4"
+        video={`${import.meta.env.BASE_URL}reel-01.mp4`}
         kicker="02 / 竞赛获奖"
         badge="竞赛与实践 · 用结果证明技术边界"
         title="参与国际 AI 视频生成挑战、ACM 多模态内容生成竞赛、Prompt 工程大赛与开源模型挑战，持续把实验转化为可复用的方法。"
@@ -28,7 +28,7 @@ export default function App() {
       <div className="glow-divider" />
       <CinematicPage
         id="projects"
-        video="/reel-02.mp4"
+        video={`${import.meta.env.BASE_URL}reel-02.mp4`}
         kicker="03 / 项目经历"
         badge="项目经历 · 从模型研究到生产平台"
         title="搭建 AI 漫剧全自动生产平台、跨模型 Prompt 工程框架和 AI 视频质量评测标准，覆盖脚本、生成、评测与 Agent 自动化。"
@@ -41,7 +41,7 @@ export default function App() {
       <div className="glow-divider" />
       <CinematicPage
         id="sharing"
-        video="/reel-03.mp4"
+        video={`${import.meta.env.BASE_URL}reel-03.mp4`}
         kicker="04 / 技术分享"
         badge="技术分享 · 让复杂技术变成可复用的方法"
         title="持续分享多模态 AI 生成管线、大模型能力对比、AI 漫剧工作流与 Agent 自动化在内容生产中的应用。"
